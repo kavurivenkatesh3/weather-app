@@ -115,16 +115,7 @@ const SearchBar = ({ onSearch }) => {
     }
   };
 
-  const formatSuggestionText = (city) => {
-    const cityName = city.name;
-    if (city.state && city.country === 'US') {
-      return `${cityName}, ${city.state}, USA`;
-    } else if (city.country) {
-      return `${cityName}, ${city.country}`;
-    }
-    return cityName;
-  };
-
+  
   return (
     <div className="search-container" ref={suggestionsRef}>
       <form className="search-bar" onSubmit={handleSubmit}>
